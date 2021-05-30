@@ -366,7 +366,7 @@
                                             <div class="form-group">
                                                 <label for="chonChiNhanh">Nhân viên đang chờ:</label>
                                                 <div class="text-center">
-                                                <button class="btn waves-effect waves-light btn-inverse btn-outline-inverse"><i class="fa fa-female" aria-hidden="true"></i>Xem</button>
+                                                <button class="btn waves-effect waves-light btn-inverse btn-outline-inverse" data-toggle="modal" data-target="#nhanVienCho"><i class="fa fa-female" aria-hidden="true"></i>Xem</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -448,7 +448,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Nguyễn Văn A</td>
+                                                    <td>Nguyễn Thị B</td>
                                                     <td>08:30:20</td>
                                                     <td>09:00:20</td>
                                                     <td class="text-center">
@@ -482,27 +482,81 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="themBan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal Thêm bàn -->
+    <div class="modal fade" id="themBan" tabindex="-1" role="dialog"aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Thêm bàn</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <div class="form-group">
+                <label for="chonChiNhanh">Chọn nhân viên:</label>
+                <select class="form-control" id="chonChiNhanh">
+                  <option>Nguyễn Thị A</option>
+                  <option>Nguyễn Thị B</option>
+                  <option>Nguyễn Thị C</option>
+                </select>
+            </div>
+            <div class="text-right">
+                <button type="button" class="btn waves-effect waves-light btn-info btn-outline-info btn-sm"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <button type="button" class="btn waves-effect waves-light btn-info btn-outline-info btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Lưu</button>
           </div>
         </div>
       </div>
     </div>
+    <!-- Modal -->
 
+
+    <!-- Modal Nhân viên chờ -->
+    <div class="modal fade" id="nhanVienCho" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header ">
+            <h5 class="modal-title " id="exampleModalLabel"><span class="text-center">Danh sách nhân viên đang chờ</span></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"  style="overflow: scroll; height: 400px;">
+            <div class="form-group">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td>Nguyễn Thị A</td>
+                        </tr>
+                         <tr>
+                            <td>Nguyễn Thị E</td>
+                        </tr>
+                         <tr>
+                            <td>Nguyễn Thị B</td>
+                        </tr>
+                         <tr>
+                            <td>Nguyễn Thị C</td>
+                        </tr>
+                         <tr>
+                            <td>Nguyễn Thị F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Lưu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
 
 <!-- Required Jquery -->
 <script type="text/javascript" src="assets/js/jquery/jquery.min.js "></script>
